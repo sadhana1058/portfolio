@@ -1,0 +1,29 @@
+.logo-carousel {
+    padding: 20px 0;
+  }
+  
+  .logo-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: float 3s ease-in-out infinite;
+    transition: transform 0.3s ease;
+  }
+  
+  .logo-item:hover {
+    transform: scale(1.1); /* pop effect on hover */
+  }
+  
+  .logo-item h5 {
+    margin-top: 10px;
+    color: #fff; /* change based on theme */
+    font-size: 18px;
+  }
+  
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0px); }
+  }
+  

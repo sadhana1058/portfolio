@@ -7,6 +7,7 @@ import arrow1 from "../assets/img/arrow1.svg";
 import arrow2 from "../assets/img/arrow2.svg";
 import colorSharp from "../assets/img/color-sharp.png"
 import { LogoCarousel } from "./LogoCarousal";
+// import { MeteorBackground } from "./MeteorBackground";
 
 export const Skills = () => {
   const responsive = {
@@ -32,6 +33,7 @@ export const Skills = () => {
   return (
     <section className="skill" id="skills">
         <div className="container">
+        {/* <MeteorBackground /> */}
             <div className="row">
                 <div className="col-12">
                     <div className="skill-bx wow zoomIn">

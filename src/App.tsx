@@ -6,6 +6,7 @@ import './App.css'
 import { NavBar } from './components/Navbar';
 import { Banner } from './components/Banner';
 import { Skills } from './components/Skills';
+import { Projects } from './components/Projects';
 function App() {
 
   return (
@@ -15,6 +16,7 @@ function App() {
         {/* <h1>hi</h1> */}
         <Banner></Banner>
         <Skills></Skills>
+        <Projects></Projects>
       </div>
     </>
   )

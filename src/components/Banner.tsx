@@ -17,7 +17,7 @@ export const Banner: React.FC = () => {
     
   const toRotate : string[] = [ "Full Stack Developer", "AI Engineer", "Software Engineer" ];
   const period = 2000;
-
+  console.log(index)
   // NEW: Intersection observer hooks
   const { ref: leftRef, inView: leftVisible } = useInView({ triggerOnce: true });
   const { ref: rightRef, inView: rightVisible } = useInView({ triggerOnce: true });

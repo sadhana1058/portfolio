@@ -1,5 +1,5 @@
 import { useState} from "react";
-import type { ChangeEvent, FormEvent }from "react";
+import type {  FormEvent }from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import contactImg from "../assets/img/contact-img.svg";
 // import "animate.css";

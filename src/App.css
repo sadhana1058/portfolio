@@ -91,7 +91,7 @@ nav.navbar {
   transition:  0.32s ease-in-out;
 }
 nav.navbar.scrolled {
-  padding: 0px 0;
+  /* padding: 0px 0; */
   background-color: #121212;
 }
 nav.navbar a.navbar-brand {
@@ -616,3 +616,207 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 0.5px;
   margin-top: 20px;
 }
+/* Aboutcss###### */
+/* Terminal Wrapper */
+.terminal-wrapper {
+  width: 100%;
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Terminal Container */
+.terminal-container {
+  border-radius: 0.5rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+.terminal-dark {
+  background: black;
+  border: 1px solid rgba(51, 65, 85, 0.5);
+}
+
+.terminal-light {
+  background: linear-gradient(to bottom right, #f9fafb, #faf5ff, #f9fafb);
+  border: 1px solid #d1d5db;
+}
+
+/* Terminal Header */
+.terminal-header {
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-bottom: 1px solid;
+}
+
+.terminal-header-dark {
+  background: rgba(30, 41, 59, 0.8);
+  border-bottom-color: rgba(51, 65, 85, 0.5);
+}
+
+.terminal-header-light {
+  background: #e5e7eb;
+  border-bottom-color: #d1d5db;
+}
+
+/* Terminal Dots */
+.terminal-dots {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.terminal-dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 9999px;
+}
+
+.terminal-dot-red {
+  background: rgba(239, 68, 68, 0.8);
+}
+
+.terminal-dot-yellow {
+  background: rgba(234, 179, 8, 0.8);
+}
+
+.terminal-dot-green {
+  background: rgba(34, 197, 94, 0.8);
+}
+
+/* Terminal Title */
+.terminal-title-wrapper {
+  flex: 1;
+  text-align: center;
+}
+
+.terminal-title {
+  font-size: 0.875rem;
+  font-family: 'Courier New', monospace;
+}
+
+.terminal-title-dark {
+  color: #9ca3af;
+}
+
+.terminal-title-light {
+  color: #4b5563;
+}
+
+/* Terminal Toggle Button */
+.terminal-toggle {
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  transition: background-color 0.2s;
+  border: none;
+  cursor: pointer;
+}
+
+.terminal-toggle-dark {
+  background: #334155;
+  color: #fbbf24;
+}
+
+.terminal-toggle-dark:hover {
+  background: #475569;
+}
+
+.terminal-toggle-light {
+  background: #d1d5db;
+  color: #374151;
+}
+
+.terminal-toggle-light:hover {
+  background: #9ca3af;
+}
+
+/* Terminal Content */
+.terminal-content {
+  padding: 1.5rem;
+  font-family: 'Courier New', monospace;
+  font-size: 0.875rem;
+  overflow-x: auto;
+}
+
+.terminal-code {
+  line-height: 1.625;
+}
+
+.terminal-code-dark {
+  color: #d1d5db;
+}
+
+.terminal-code-light {
+  color: #1f2937;
+}
+
+/* Syntax Highlighting - Dark Mode */
+.terminal-comment-dark {
+  color: #6b7280;
+}
+
+.terminal-keyword-dark {
+  color: #c084fc;
+}
+
+.terminal-string-dark {
+  color: #4ade80;
+}
+
+.terminal-component-dark {
+  color: #60a5fa;
+}
+
+.terminal-property-dark {
+  color: #22d3ee;
+}
+
+/* Syntax Highlighting - Light Mode */
+.terminal-comment-light {
+  color: #4b5563;
+}
+
+.terminal-keyword-light {
+  color: #7c3aed;
+}
+
+.terminal-string-light {
+  color: #15803d;
+}
+
+.terminal-component-light {
+  color: #1d4ed8;
+}
+
+.terminal-property-light {
+  color: #0e7490;
+}
+
+/* Terminal Cursor */
+.terminal-cursor {
+  display: inline-block;
+  width: 0.5rem;
+  height: 1rem;
+  margin-left: 0.25rem;
+  animation: terminal-blink 1s infinite;
+}
+
+.terminal-cursor-dark {
+  background: #c084fc;
+}
+
+.terminal-cursor-light {
+  background: #7c3aed;
+}
+
+@keyframes terminal-blink {
+  0%, 49% {
+    opacity: 1;
+  }
+  50%, 100% {
+    opacity: 0;
+  }
+}
+

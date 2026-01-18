@@ -30,6 +30,9 @@ export const Projects = () => {
       description: "Design & Development",
       imgUrl: projImg3,
     },
+   
+  ];
+  const prjtab2=[
     {
       title: "Business Startup",
       description: "Design & Development",
@@ -94,14 +97,16 @@ export const Projects = () => {
                   </Tab.Pane>
 
                   <Tab.Pane eventKey="second">
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit...
-                    </p>
+                  <Row>
+                      {prjtab2.map((prjtab2, index) => (
+                        <ProjectCard key={index} {...prjtab2} />
+                      ))}
+                    </Row>
                   </Tab.Pane>
 
                   <Tab.Pane eventKey="third">
                     <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit...
+                      New Ones Coming soon..
                     </p>
                   </Tab.Pane>
                 </Tab.Content>

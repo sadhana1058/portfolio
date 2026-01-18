@@ -36,7 +36,11 @@ I value thoughtful conversations, new perspectives, and environments that reward
         {/* RIGHT IMAGE */}
         <div className="about-image-wrapper">
           <div className="about-image-placeholder">
-            <span>IMAGE PLACEHOLDER</span>
+          <img
+    src='src/assets/img/aboutmeimg.jpg'
+    alt="Sadhana Saravanan"
+    className="about-image"
+  />
           </div>
 
           <div className="about-vertical-tag">

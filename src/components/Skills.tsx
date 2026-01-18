@@ -32,30 +32,36 @@ export const Skills = () => {
 
   return (
     <section className="skill" id="skills">
+      <br>
+      </br>
         <div className="container">
         {/* <MeteorBackground /> */}
             <div className="row">
                 <div className="col-12">
                     <div className="skill-bx wow zoomIn">
                         <h2>Skills</h2>
-                        <p>Skills that I have learnt so far through my internships and projects.<br>
+                        <p>Skills that I have learnt so far through my internships,  work experience and projects.<br>
                         </br> I gained them by implementing projects.</p>
                         <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                             <div className="item">
                                 <img src={meter1} alt="Image" />
-                                <h5>Web Development</h5>
+                                <h5>Full Stack Web Development </h5>
                             </div>
                             <div className="item">
                                 <img src={meter2} alt="Image" />
-                                <h5>Brand Identity</h5>
+                                <h5> AI Engineer</h5>
                             </div>
                             <div className="item">
                                 <img src={meter3} alt="Image" />
-                                <h5>Logo Design</h5>
+                                <h5> Data Engineering</h5>
                             </div>
                             <div className="item">
                                 <img src={meter1} alt="Image" />
-                                <h5>Web Development</h5>
+                                <h5>Backend Development</h5>
+                            </div>
+                            <div className="item">
+                                <img src={meter1} alt="Image" />
+                                <h5>Automation</h5>
                             </div>
                         </Carousel>
                         <LogoCarousel></LogoCarousel>

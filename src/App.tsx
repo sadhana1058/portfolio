@@ -9,6 +9,7 @@ import { Skills } from './components/Skills';
 import { Projects } from './components/Projects';
 import { Contact } from './components/Contact';
 import { About} from './components/About';
+import { Education } from './components/Education';
 function App() {
 
   return (
@@ -18,6 +19,7 @@ function App() {
         {/* <h1>hi</h1> */}
         <Banner></Banner>
         <About></About>
+        <Education></Education>
         <Skills></Skills>
         <Projects></Projects>
         <Contact></Contact>

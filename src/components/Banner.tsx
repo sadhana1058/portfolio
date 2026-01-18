@@ -15,7 +15,7 @@ export const Banner: React.FC = () => {
     const [delta, setDelta] = useState<number>(300 - Math.random() * 100);
     const [index, setIndex] = useState<number>(1);
     
-  const toRotate : string[] = [ "Full Stack Developer", "AI Engineer", "Software Engineer" ];
+  const toRotate : string[] = [ "Software Engineer", "AI Engineer", "Full Stack Engineer" ];
   const period = 2000;
   console.log(index)
   // NEW: Intersection observer hooks
@@ -78,6 +78,7 @@ export const Banner: React.FC = () => {
 
               <h1>
                 {`Hi! I'm Sadhana ,`}
+                <br></br>
                 <span className="txt-rotate">
                   <span className="wrap">{text}</span>
                 </span>
@@ -85,9 +86,15 @@ export const Banner: React.FC = () => {
 
               <p>A masters student at University at Buffalo explorng new things like agents,MCP...</p>
 
-              <button onClick={() => console.log('connect')}>
-                Let’s Connect <BsArrowRightCircle size={25} />
-              </button>
+              <a
+  href="https://www.linkedin.com/in/sadhana-saravanan-5aa7a21b1/"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <button>
+    Let’s Connect <BsArrowRightCircle size={25} />
+  </button>
+</a>
             </div>
           </Col>
           <Col xs={12} md={6} xl={5}>

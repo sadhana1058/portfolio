@@ -1,24 +1,36 @@
 import React, { useState, useEffect } from 'react';
 
+interface TerminalProps {
+  objectName?: string;
+  data?: Record<string, string>;
+  fileName?: string;
+  typingSpeed?: number;
+}
 
-interface TerminalProps {}
-
-const Terminal: React.FC<TerminalProps> = () => {
+const Terminal: React.FC<TerminalProps> = ({ 
+  objectName = 'education',
+  data = {
+    degree: "MASTERS DEGREE",
+    major: "Computer Science (Artificial Intelligence / Machine Learning Track)",
+    university: "University at Buffalo, SUNY",
+    period: "2024-2026",
+    status: "In Progress"
+  },
+  fileName = 'MyComponent.jsx',
+  typingSpeed = 80
+}) => {
   const [displayedCode, setDisplayedCode] = useState<string>('');
   const [currentLine, setCurrentLine] = useState<number>(0);
   const [isDark, setIsDark] = useState<boolean>(true);
   
+  // Generate code lines from the data object
   const codeLines: string[] = [
-    '// Education Information',
-    'const education = {',
-    '  degree: "MASTERS DEGREE",',
-    '  major: "Computer Science (Artificial Intelligence / Machine Learning Track)",',
-    '  university: "University at Buffalo, SUNY",',
-    '  period: "2024-2026",',
-    '  status: "In Progress"',
+    `// ${objectName.charAt(0).toUpperCase() + objectName.slice(1)} Information`,
+    `const ${objectName} = {`,
+    ...Object.entries(data).map(([key, value]) => `  ${key}: "${value}",`),
     '};',
     '',
-    'export default education;'
+    `export default ${objectName};`
   ];
 
   useEffect(() => {
@@ -26,10 +38,10 @@ const Terminal: React.FC<TerminalProps> = () => {
       const timer = setTimeout(() => {
         setDisplayedCode((prev: string) => prev + codeLines[currentLine] + '\n');
         setCurrentLine((prev: number) => prev + 1);
-      }, 80);
+      }, typingSpeed);
       return () => clearTimeout(timer);
     }
-  }, [currentLine, codeLines]);
+  }, [currentLine, codeLines, typingSpeed]);
 
   const highlightSyntax = (code: string): React.ReactElement[] => {
     return code.split('\n').map((line: string, i: number) => {
@@ -38,12 +50,8 @@ const Terminal: React.FC<TerminalProps> = () => {
         return <div key={i} className={isDark ? "terminal-comment-dark" : "terminal-comment-light"}>{line}</div>;
       }
       
-      // Split line into parts and apply styling
-      const parts: React.ReactNode[] = [];
-      let remaining = line;
-      
       // Match keywords
-      const keywordRegex = /\b(const|export|return|styled)\b/g;
+      const keywordRegex = /\b(const|export|return|default)\b/g;
       let lastIndex = 0;
       let match;
       
@@ -119,7 +127,7 @@ const Terminal: React.FC<TerminalProps> = () => {
             <div className="terminal-dot terminal-dot-green"></div>
           </div>
           <div className="terminal-title-wrapper">
-            <span className={`terminal-title ${isDark ? 'terminal-title-dark' : 'terminal-title-light'}`}>MyComponent.jsx</span>
+            <span className={`terminal-title ${isDark ? 'terminal-title-dark' : 'terminal-title-light'}`}>{fileName}</span>
           </div>
           <button
             onClick={() => setIsDark(!isDark)}

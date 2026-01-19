@@ -647,7 +647,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /* Terminal Header */
 .terminal-header {
-  padding: 0.75rem 1rem;
+  padding: 0.2rem 1rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -827,6 +827,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   padding: 100px 0;
   background: #ffffff;
   color: #111;
+  padding-bottom: 100px;
+  
 }
 
 .about-container {
@@ -836,6 +838,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   grid-template-columns: 1.1fr 0.9fr;
   gap: 60px;
   align-items: center;
+  height: 650px;
+  
 }
 
 /* Left text */
@@ -844,13 +848,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-weight: 700;
   letter-spacing: 1px;
   margin-bottom: 20px;
+  font-size: 30px;
 }
 
 .about-text p {
   line-height: 1.8;
   margin-bottom: 18px;
-  color: #333;
-  font-size: 16px;
+  color: white;
+  font-size: 18px;
 }
 
 /* Right image */
@@ -879,11 +884,152 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   right: -60px;
   top: 50%;
   transform: translateY(-50%) rotate(90deg);
-  background: #111;
   color: #fff;
-  padding: 10px 22px;
+  /* padding: 1px 22px; */
+  padding-bottom: 10px;
   border-radius: 8px;
-  font-size: 14px;
-  letter-spacing: 1px;
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
 }
 
+/*stacked terminal styling */
+/* Stacked Terminals Container */
+.stacked-terminals-container {
+  width: 100%;
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Individual Terminal Item */
+.stacked-terminal-item {
+  background: #2d2d2d;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.stacked-terminal-item:hover {
+  background: #333333;
+}
+
+.stacked-terminal-item.active {
+  background: #2d2d2d;
+}
+
+/* Terminal Header */
+.stacked-terminal-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.stacked-terminal-header:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Terminal Dots */
+.stacked-terminal-dots {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.stacked-dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+}
+
+.stacked-dot-red {
+  background: #ff5f56;
+}
+
+.stacked-dot-yellow {
+  background: #ffbd2e;
+}
+
+.stacked-dot-green {
+  background: #27c93f;
+}
+
+/* Terminal Logo */
+.stacked-terminal-logo {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Terminal Title */
+.stacked-terminal-title {
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 500;
+  flex: 1;
+}
+
+/* Terminal Content */
+.stacked-terminal-content {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 1000px;
+  }
+}
+
+/* Override Terminal wrapper padding when inside stacked terminals */
+.stacked-terminal-content .terminal-wrapper {
+  padding: 0;
+}
+
+.stacked-terminal-content .terminal-container {
+  border-radius: 0;
+  border: none;
+}
+
+.experience h1 {
+  
+  line-height: 1;
+  margin-bottom: 20px;
+  display: block;
+}
+#experience-header{
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  /* text-align: center; */
+  padding: 60px 50px;
+  padding-left: 250px;
+  margin-top: -60px;
+}
+#education-header{
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-align: center;
+  /* padding: 60px 50px; */
+  
+  margin-top: 0px;
+
+}
+.education{
+  
+  margin: 0 auto;
+  margin-top: 200px;
+  gap: 60px;
+  align-items: center;
+  height: 1000px;
+}

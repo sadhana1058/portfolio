@@ -10,6 +10,7 @@ import { Projects } from './components/Projects';
 import { Contact } from './components/Contact';
 import { About} from './components/About';
 import { Education } from './components/Education';
+import { Experience } from './components/Experience';
 function App() {
 
   return (
@@ -19,6 +20,8 @@ function App() {
         {/* <h1>hi</h1> */}
         <Banner></Banner>
         <About></About>
+        
+        <Experience></Experience>
         <Education></Education>
         <Skills></Skills>
         <Projects></Projects>

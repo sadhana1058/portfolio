@@ -3,7 +3,8 @@ import Terminal from "./Terminal";
 export const Education = () => {
   return (
     <>
-    <section className="education" id="education">
+<section className="education" id="education">
+    <h2 id = 'education-header'>Education</h2>
      <Terminal 
   objectName="education- post graduate degree"
   data={{

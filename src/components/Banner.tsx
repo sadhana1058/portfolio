@@ -95,6 +95,12 @@ export const Banner: React.FC = () => {
     Let’s Connect <BsArrowRightCircle size={25} />
   </button>
 </a>
+<a
+href="https://cal.com/sadhana-saravanan-pybvof/15min?overlayCalendar=true">
+ <button>
+   Grab a virtual coffe chat with me <BsArrowRightCircle size={25} />
+  </button>
+</a>
             </div>
           </Col>
           <Col xs={12} md={6} xl={5}>

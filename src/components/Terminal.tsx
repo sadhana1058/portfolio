@@ -16,7 +16,7 @@ const Terminal: React.FC<TerminalProps> = ({
     period: "2024-2026",
     status: "In Progress"
   },
-  fileName = 'MyComponent.jsx',
+  fileName = 'education',
   typingSpeed = 80
 }) => {
   const [displayedCode, setDisplayedCode] = useState<string>('');
